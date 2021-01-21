@@ -1,21 +1,27 @@
-const { Player } = require('../database/models');
+const { Student } = require('../database/models');
 
 const seedDatabase = async () => {
   await Promise.all([
-    Player.create({
+    Student.create({
       firstName: "Kyrie",
       lastName: "Irving",
-      jerseyNumber: 11
+      gpa: 3.5,
+      email: 'student@gmail.com',
+      image: 'djshnfdskjgfbnsjlkdfbgksfjb'
     }),
-    Player.create({
+    Student.create({
       firstName: "LeBron",
       lastName: "James",
-      jerseyNumber: 23
+      gpa: 3.5,
+      email: 'student@gmail.com',
+      image: 'djshnfdskjgfbnsjlkdfbgksfjb'
     }),
-    Player.create({
+    Student.create({
       firstName: "Luka",
       lastName: "Doncic",
-      jerseyNumber: 77
+      gpa: 3.5,
+      email: 'student@gmail.com',
+      image: 'djshnfdskjgfbnsjlkdfbgksfjb'
     })
   ]);
 }
