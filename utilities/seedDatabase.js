@@ -1,7 +1,9 @@
-const { Student } = require('../database/models');
+const { Student, Campus } = require('../database/models');
 
 const seedDatabase = async () => {
+  console.log('before')
   await Promise.all([
+    
     Student.create({
       firstName: "Kyrie",
       lastName: "Irving",
@@ -22,8 +24,17 @@ const seedDatabase = async () => {
       gpa: 3.5,
       email: 'student@gmail.com',
       image: 'djshnfdskjgfbnsjlkdfbgksfjb'
+    }),
+    Campus.create({
+
+      name: 'Brooklyn College',
+      image: 'dsfaddsfsfs',
+      description: 'CUNY',
+      adress: 'Brooklyn'
+
     })
   ]);
+  console.log('after')
 }
 
 module.exports = seedDatabase;
