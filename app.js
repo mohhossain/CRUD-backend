@@ -13,6 +13,7 @@ const logger = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
 
+
 // Utilities;
 const createLocalDatabase = require('./utilities/createLocalDatabase');
 const seedDatabase = require('./utilities/seedDatabase');
@@ -87,6 +88,13 @@ const bootApp = async () => {
 
 // Main function invocation;
 bootApp();
+
+var PORT = 3030; 
+  
+app.listen(PORT, function(err){ 
+    if (err) console.log("Error in server setup") 
+    console.log("Server listening on Port", PORT); 
+})
 
 // Export our app, so that it can be imported in the www file;
 module.exports = app;

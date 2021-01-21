@@ -1,4 +1,7 @@
 const pgtools = require('pgtools');
+require("dotenv").config();
+
+console.log(process.env.LOCAL_DATABASE_PASSWORD)
 
 // An object with user, host, port, and password properties;
 const config = {
