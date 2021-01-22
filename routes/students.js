@@ -20,12 +20,12 @@ app.get('/students/:id', async function(req,res,next){
   res.send(stud)
 })
 
-var PORT = 3030; 
+// var PORT = 3030; 
   
-app.listen(PORT, function(err){ 
-    if (err) console.log("Error in server setup") 
-    console.log("Server listening on Port", PORT); 
-})
+// app.listen(PORT, function(err){ 
+//     if (err) console.log("Error in server setup") 
+//     console.log("Server listening on Port", PORT); 
+// })
 
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
